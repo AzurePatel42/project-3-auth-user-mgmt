@@ -1,41 +1,37 @@
-Project 3 — Auth & User Management API
-A production‑ready FastAPI microservice for secure user authentication and management.
+# Project 3 — Auth & User Management API
+
+A production‑ready FastAPI microservice for secure user authentication and management.  
 This service provides JWT‑based login, password hashing, user registration, and PostgreSQL integration, all packaged inside a clean, scalable architecture and fully containerized with Docker.
 
-🚀 Features
-🔐 User Registration with hashed passwords (bcrypt)
+---
 
-🔑 JWT Authentication (access tokens)
+## 🚀 Features
 
-🧂 Secure Password Hashing using passlib
+- User Registration with hashed passwords (bcrypt)
+- JWT Authentication (access tokens)
+- Secure Password Hashing using passlib
+- PostgreSQL + SQLAlchemy ORM
+- Environment‑based configuration using Pydantic Settings
+- Dockerized for consistent deployment
+- Clean, scalable project structure
+- Auto‑generated API docs via Swagger UI
 
-🗄️ PostgreSQL + SQLAlchemy ORM
+---
 
-⚙️ Environment‑based configuration using Pydantic Settings
+## 🧱 Tech Stack
 
-🐳 Dockerized for consistent deployment
+- FastAPI
+- Python 3.11
+- SQLAlchemy ORM
+- PostgreSQL
+- Pydantic v2 + Pydantic Settings
+- Python‑Jose (JWT)
+- Docker & Docker Compose
 
-📁 Clean, scalable project structure
+---
 
-📘 Auto‑generated API docs via Swagger UI
+## 📂 Project Structure
 
-🧱 Tech Stack
-FastAPI
-
-Python 3.11
-
-SQLAlchemy ORM
-
-PostgreSQL
-
-Pydantic v2 + Pydantic Settings
-
-Python‑Jose (JWT)
-
-Docker & Docker Compose
-
-📂 Project Structure
-Code
 app/
 │
 ├── auth/
@@ -54,55 +50,85 @@ app/
 │
 ├── database.py            # SQLAlchemy engine & session
 └── main.py                # FastAPI app entrypoint
-🔌 API Endpoints
-Auth
-Method	Endpoint	Description
-POST	/auth/register	Register a new user
-POST	/auth/login	Login and receive JWT token
 
-
-Default
-Method	Endpoint	Description
-GET	/	Health check
-
-
-🐳 Running with Docker
-1️⃣ Build the containers
 Code
+
+---
+
+## 🔌 API Endpoints
+
+### Auth
+
+| Method | Endpoint        | Description              |
+|--------|------------------|--------------------------|
+| POST   | /auth/register   | Register a new user      |
+| POST   | /auth/login      | Login and receive JWT    |
+
+### Default
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET    | /        | Health check |
+
+---
+
+## 🐳 Running with Docker
+
+### 1. Build the containers
+
 docker compose build --no-cache
-2️⃣ Start the services
+
 Code
+
+### 2. Start the services
+
 docker compose up
-3️⃣ Open API Docs
+
 Code
+
+### 3. Open API Docs
+
 http://localhost:8000/docs
-🧪 Example Requests
-Register
-json
+
+Code
+
+---
+
+## 🧪 Example Requests
+
+### Register
+
 POST /auth/register
 {
-  "email": "test@example.com",
-  "password": "123456"
+"email": "test@example.com",
+"password": "123456"
 }
-Login
-json
+
+Code
+
+### Login
+
 POST /auth/login
 {
-  "email": "test@example.com",
-  "password": "123456"
+"email": "test@example.com",
+"password": "123456"
 }
-🔮 Future Enhancements
-User profile CRUD
 
-Role‑based access control (RBAC)
+Code
 
-Refresh tokens
+---
 
-Admin dashboard endpoints
+## 🔮 Future Enhancements
 
-Email verification
+- User profile CRUD
+- Role‑based access control (RBAC)
+- Refresh tokens
+- Admin dashboard endpoints
+- Email verification
+- Password reset flow
 
-Password reset flow
+---
 
-📜 License
+## 📜 License
+
 This project is open‑source and available under the MIT License.
