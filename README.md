@@ -2,9 +2,6 @@ Project 3 — Auth & User Management API
 A production‑ready FastAPI microservice for secure user authentication and management.
 This service provides JWT‑based login, password hashing, user registration, and PostgreSQL integration, all packaged inside a clean, scalable architecture and fully containerized with Docker.
 
-
-
-
 🚀 Features
 🔐 User Registration with hashed passwords (bcrypt)
 
