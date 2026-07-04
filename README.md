@@ -1,4 +1,10 @@
-Project 3 — Auth & User Management API
+# patel-auth-user-mgmt
+
+⚠️ Legacy authentication service
+
+Superseded by:
+
+👉 patel-auth-service-framework
 A production‑ready FastAPI microservice for secure user authentication and management.
 This service provides JWT‑based login, password hashing, user registration, and PostgreSQL integration, all packaged inside a clean, scalable architecture and fully containerized with Docker.
 
